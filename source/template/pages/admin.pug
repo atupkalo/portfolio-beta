@@ -1,0 +1,33 @@
+extends ../_template
+
+block variables
+  - var title = 'admin'
+
+block content
+  header.header__admin
+    .header__admin-title  management panel
+    a(href="/index.html").header__admin-link Come back to portfolio
+  .admin-wrap
+    ul.admin__tabs
+
+      li.admin__tabs-item.active
+        a(href="#").admin__tabs-item-link.change_color
+          .admin__tabs-item-title ABOUT
+      li.admin__tabs-item
+        a(href="#").admin__tabs-item-link
+          .admin__tabs-item-title BLOG
+      li.admin__tabs-item
+        a(href="#").admin__tabs-item-link
+          .admin__tabs-item-title MY WORK
+      li.admin__tabs-item
+        a(href="#").admin__tabs-item-link
+          .admin__tabs-item-title TAB 4
+    ul.admin__content
+      li.admin__content-item.active
+        include ../common/admin_tab-1
+      li.admin__content-item
+        include ../common/admin_tab-2
+      li.admin__content-item
+        include ../common/admin_tab-3
+      li.admin__content-item
+        include ../common/admin_tab-4

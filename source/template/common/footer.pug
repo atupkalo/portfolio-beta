@@ -1,0 +1,23 @@
+.footer-wrap
+    a(href="#page-top")#page-bottom.footer__arrow-up
+        .footer__arrow-up-icon <i class="fas fa-angle-up"></i>
+    .footer-top
+        -
+            var f_menu = [
+            ['my work', 'work.html'],
+            ['about me', 'about.html'],
+            ['my blog', 'blog.html'],
+            ['sing in', 'index.html'],
+            ]
+        ul.footer__menu-list
+            each item in f_menu
+                li.footer__menu-item
+                    a(href=`${item[1]}`).footer__menu-link #{item[0]}
+        .footer-top__right
+            +socials('#fff')
+    .footer-bottom
+        .footer-bottom__left
+            .footer-bottom__text I hope you like my portfolio
+        .footer-bottom__right
+            .footer-bottom__rights &#169; created by Anatolii Tupkalo | "made with love"
+

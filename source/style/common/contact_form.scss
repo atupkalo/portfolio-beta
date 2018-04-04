@@ -1,0 +1,65 @@
+.speakers-bottom{
+  @include flex(row, center, center);
+}
+
+.cont-form__wrap{
+  box-shadow: 0 4px 20px 2px rgba(#000, .3);
+  position: relative;
+  border-radius: 5px;
+  width: 380px;
+  height: 420px;
+  overflow: hidden;
+}
+
+.cont-form__bg-wrap{
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("/assets/img/bg-gossip.png") no-repeat;
+  background-position: 0 -500;
+  background-size: 1920px auto;
+  filter: blur(10px);
+}
+
+.cont-form__title-wrap{
+  @include flex(row, center, center);
+}
+.cont-form__title{
+  @include font(32px, $oswald, $gray);
+  padding-top: 20px;
+}
+.cont-form__error{
+  color: red;
+  text-align: center;
+  width: 350px;
+  min-height: 20px;
+}
+.contact{
+  @include flex(column, center, center);
+}
+.cont-input{
+  margin-bottom: 15px;
+  width: 300px;
+  height: 40px;
+  border: 1px solid $green;
+    &:hover{
+      border: 1px solid $dark-green;
+  }
+    &:focus{
+      border: 2px solid $dark-green;
+    }
+}
+.cont-textarea{
+  width: 300px;
+  height: 120px;
+  border: 1px solid $green;
+  &:hover{
+    border: 1px solid $dark-green;
+  }
+  &:focus{
+    border: 2px solid $dark-green;
+  }
+}

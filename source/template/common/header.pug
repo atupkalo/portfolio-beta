@@ -1,0 +1,21 @@
+.header-wrap
+    .header-main__bg
+        picture
+            source(srcset="/assets/img/bg.png" media="(min-width: 1200px)")
+            source(srcset="/assets/img/header_bg1200.jpg" media="(min-width: 768px)")
+            source(srcset="/assets/img/header_bg768.jpg" media="(min-width: 420px)")
+            img.img(src="/assets/img/header_bg420.jpg" alt="header main background").header-main__bg__pic
+    .header-bg
+        .header-bg__img-wrapper
+            img(src="assets/img/svg/portfolio.svg" alt="portfolio(picture-text)").header-bg__pic
+    .header-socials__wrap
+        +socials('#fff')
+    .header-avatar
+        +avatar('--wight')
+    a(href="#").header-menu__link
+        .header-menu <i class="fas fa-bars"></i>
+    a(href="#").header-arrow__link
+        .header-arrow <i class="fas fa-chevron-down"></i>
+    .header__triangle-left
+    .header__triangle-right
+

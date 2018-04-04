@@ -1,0 +1,63 @@
+.about-wrap{
+  @include flex(row, center, stretch);
+  min-height: 700px;
+  position: relative;
+  background: #fff;
+}
+.map__wrapper{
+  position: relative;
+}
+.about-left, .about-right{
+  padding-bottom: 20px;
+  min-height: 700px;
+  width: 50%;
+}
+.about-left{
+  background: #faf8f0;
+}
+.about-right{
+  background: #eeebdf ;
+}
+.map__block{
+  width: 100%;
+  min-height: 800px;
+}
+
+.map__error{
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+.map__error-message{
+  @include font(60px, $sans, #ccc);
+  padding-top: 100px;
+}
+.footer__holber {
+  width: 100%;
+  height: 200px;
+  background-image: url('/assets/img/foot_hold_bg.png');
+  background-repeat: no repeat;
+  background-size: cover;
+}
+.about__triangle-left{
+  z-index: 10;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 50%;
+  height: 150px;
+  background: linear-gradient(to top right, #faf8f0 50%, transparent 50%);
+}
+.about__triangle-right{
+  z-index: 10;
+  position: absolute;
+  top: -150px;
+  right: 0;
+  width: 50%;
+  height: 150px;
+  background: linear-gradient(to top left, #eeebdf 50%, transparent 50%);
+}

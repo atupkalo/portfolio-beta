@@ -1,0 +1,71 @@
+.blog{
+  background: #fff;
+}
+.blog__page-title{
+  min-height: 20px;
+  @include flex(row, center, center);
+}
+.blog__content{
+  position: relative;
+  @include flex(row, center, flex-start);
+}
+
+//------------------------------------ NAV
+.nav-fixed{
+  position: fixed !important;
+  top: 0;
+  left: 5%;
+}
+.nav{
+  width: 20%;
+  position: absolute;
+  left: 60px;
+  min-height: 300px;
+}
+.nav__under-clone{
+  width: 20%;
+  margin-left: 60px;
+  height: 300px;
+}
+.nav__list{
+  @include flex(column, flex-start, flex-start);
+}
+.nav__item{
+  padding: 30px 5px 8px 5px;
+  border-bottom: 3px solid #E0E0E0;
+  @include font(18px, $sans, $gray);
+  margin-bottom: 10px;
+}
+.blog-item__active{
+  border-bottom: 3px solid $green;
+  @include font(18px, $sans, #768280);
+  font-weight: bold;
+}
+
+
+//-------------------------------------ARTICLES
+.articles-wrap{
+  margin: 0 40px;
+  width: 70%;
+  height: 100%;
+}
+.blog__article{
+  padding: 20px 0 40px 0;
+  border-bottom: 1px dashed $green;
+}
+.article__title {
+  @include font(22px, $oswald, $black);
+  padding: 10px 0;
+  font-weight: 300;
+}
+.article__date{
+  @include font(22px, $sans, $green);
+}
+.article__text{
+  @include font(18px, $sans, $gray);
+  line-height: 1.6;
+}
+.blog__footer-holder{
+  width: 100%;
+  height: 410px;
+}

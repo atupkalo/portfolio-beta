@@ -1,0 +1,19 @@
+@mixin font ($size, $name, $color){
+  font-size: $size;
+  font-family: $name, sans-serif;
+  color: $color;
+}
+
+@mixin param-paralax($wid, $marg, $bottom, $z-i){
+  width: $wid;
+  margin-left: $marg;
+  bottom: $bottom;
+  z-index: $z-i;
+}
+
+@mixin flex($derection, $position, $center){
+  display: flex;
+  flex-direction: $derection;
+  justify-content: $position;
+  align-items: $center;
+}

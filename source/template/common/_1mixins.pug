@@ -1,0 +1,71 @@
+
+mixin preloader
+    .preloader
+        .preloader__spiner
+            .preloader__animat
+            .preloader__percents 0
+
+
+mixin avatar(color)
+    .avatar
+        .avatar__img-block
+            .avatar__img-wrap
+                img.avatar__img(src="/assets/img/avatar-min.jpg" alt="picture")
+        h1(class=`avatar__name${color}`) Anatolii Tupkalo
+        h2(class=`avatar__desc${color}`) portfolio of web-developer
+
+
+mixin socials(fill)
+    .socials
+        -
+            var scList = [
+            ['github_round', 'github.com/atupkalo', 'github'],
+            ['in_round', 'www.linkedin.com/in/anatolii-tupkalo-3aa8bb9b/', 'in'],
+            ['fb-c', 'www.facebook.com/anatoliy.orehov', 'fb']
+            ]
+        each item in scList
+            a(href=`https://${item[1]}` target="_blank").socials__link
+                svg(width="35px" height="35px" role="img" fill=`${fill}` title=`${item[2]}`)
+                    use(xlink:href=`assets/img/sprite.svg#${item[0]}`).socials__icons
+
+
+mixin buttons(num)
+    .buttons__wrap
+        -var front = [['my work', 'work'],['about me', 'about'],['my blog', 'blog']]
+        -var cont = [['clear', 'reset'], ['submit', 'submit']]
+        -var login = [['main page', 'empty'],['enter', 'buttons-login']]
+        if num == 1
+            each item in front
+                a(href=`${item[1]}.html`).buttons__link
+                    .buttons__item= item[0]
+        else if num == 2
+            each item in cont
+                input(id=`${item[0]}` type=`${item[1]}`, value=`${item[0]}`, form="cont-me-form").buttons__link.buttons__item
+        else if num == 3
+            each item in login
+                a(id=`${item[1]}` href="#").buttons__link.buttons__link--50.buttons__link
+                    .buttons__item= item[0]
+
+mixin page_title(name, title)
+    .page-title__wrap
+        .page-title__pic-wrap
+            img(src=`/assets/img/svg/${name}.svg` alt="work(svg text)").page-title__pic
+        .page-title__desc
+            h1.page-title__desc-text #{title}
+
+
+mixin menu
+    .menu-wrap.display
+        .menu__close
+            .menu__close-item <i class="far fa-times-circle"></i>
+        ul.menu__list
+            -
+                var items = [
+                ['my work and contacts', 'work.html'],
+                ['about me', 'about.html'],
+                ['my blog', 'blog.html'],
+                ['login in', 'index.html']
+                ]
+            each item in items
+                li.menu-item
+                    a(href=`${item[1]}`).menu__link #{item[0]}

@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+    - var title = 'blog'
+
+block content
+    +menu
+    +preloader
+    .wrapper
+        section.header
+            include ../common/header
+        section.blog
+            .blog__page-title
+                +page_title('blog', 'Blog')
+            .blog__content
+                aside.nav
+                    ul.nav__list
+                        a(href="#article-1").nav__list-item-link
+                            li.nav__item.blog-item__active
+                                .nav__item-desc  Some article-111-.blog__article
+                        a(href="#article-2").nav__list-item-link
+                            li.nav__item
+                                .nav__item-desc  Some article-111-.blog__article
+                        a(href="#article-3").nav__list-item-link
+                            li.nav__item
+                                .nav__item-desc  Some article-111-.blog__article
+                        a(href="#article-4").nav__list-item-link
+                            li.nav__item
+                                .nav__item-desc  Some article-111-.blog__article
+                .nav__under-clone
+                .articles-wrap
+                    include ../common/article_1
+                    include ../common/article_2
+                    include ../common/article_3
+                    include ../common/article_4
+            .blog__footer-holder
+        footer.footer
+            include ../common/footer
+

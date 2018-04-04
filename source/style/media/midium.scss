@@ -1,0 +1,123 @@
+@media (max-width: 1400px) {
+  .skills-svg__list{
+    padding: 0 5px;
+  }
+  .skills-svg__item{
+     margin-right: 2%;
+   }
+  //-------------------------------------about small slider
+  .about-left__slide-wrap{
+    float: none;
+    width: 92%;
+    margin-bottom: 20px;
+  }
+  .about-left__content{
+    @include flex(column, center, center);
+  }
+  .speakers-content__item{
+    width: 40%;
+  }
+}
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+@media(max-width: 920px){
+  .skills-svg__item{
+    margin-right: 0;
+  }
+  .about-skills__desc{
+    margin-bottom: 20px;
+  }
+    //--------------------------------------------header
+  .header-wrap{
+    min-height: 485px;
+  }
+  .header-socials__wrap{
+    left: 3%;
+    top: 3%;
+  }
+  .header-menu{
+    top: 3%;
+  }
+  .header-bg__img-wrapper{
+    width: 95%;
+    height: 350px;
+  }
+@media (max-width: 1200px) {
+  .cont-form__bg-wrap{
+    filter: blur(20px);
+  }
+}
+
+
+  //-------------------------------------------------------ABOUT
+  .about-wrap{
+    @include flex(column, center, stretch);
+  }
+  .about-left, .about-right{
+    width: 100%;
+  }
+  .about__triangle-right{
+    background: linear-gradient(to top left, #faf8f0  50%, transparent 50%);
+  }
+
+  //--------------------------------skills
+  .about-skills__item{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .about-skills__item-title{
+    text-align: center;
+  }
+  .skills-svg__list{
+    @include flex(row, center, center);
+}
+
+//  --------------------------------slider
+
+  .slider-wrap {
+    @include flex(column, center, stretch);
+  }
+  .slider-right, .slider-left{
+  width: 100%;
+}
+  .slider-right{
+    flex-wrap: wrap-reverse;
+  }
+  .slider-left{
+    margin-bottom: 35px;
+  }
+  .slider-left__bg{
+    display: none;
+  }
+
+
+
+//  ----------------------------------------------------------BLOG
+  .nav{
+    display: none;
+  }
+  .nav__under-clone{
+    display: none;
+  }
+  .articles-wrap{
+    width: 90%;
+  }
+
+
+
+//  --------------------------------------------------------- MY WORK
+//  --------------------------------------------------speakers
+  .speakers-content{
+    @include flex(column, center, center);
+    margin-bottom: 30px;
+  }
+  .speakers-content__item{
+    width: 90%;
+  }
+  .slider-right__pic-wrap{
+    padding: 20px;
+  }
+}

@@ -1,0 +1,182 @@
+ //--------------------------------------------   AVATAR
+
+
+ .front-block__avatar-wrap{
+   width: 100%;
+   @include flex(row, center, center);
+   margin: 20px 0;
+ }
+
+ .avatar{
+   text-align: center;
+   width: 300px;
+ }
+ .avatar__img-block{
+   width: 300px;
+   height: 150px;
+   @include flex(row, center, center);
+ }
+ .avatar__img-wrap{
+   width: 140px;
+   height: 140px;
+   overflow: hidden;
+   border-radius: 50%;
+ }
+ .avatar__name--dark{
+   @include font(32px, $sans, $black);
+   padding: 10px 5px;
+ }
+ .avatar__desc--dark{
+   @include font(16px, $sans, $gray);
+ }
+ .avatar__name--wight{
+   @include font(32px, $sans, #fff);
+   padding: 10px 5px;
+ }
+ .avatar__desc--wight{
+   @include font(16px, $sans, #fff);
+ }
+
+ //-------------------------------------------------------SOCIALS
+
+ .socials{
+   margin: 0 auto;
+   width: 150px;
+   @include flex(row, space-between, center);
+ }
+ .socials__link{
+   display: block;
+   transition: .3s;
+   &:hover{
+     .socials__icons{
+       opacity: .7;
+     }
+   }
+ }
+
+
+ // ------------------------------------------------------BUTTONS
+ .buttons__link.buttons__link--z{
+   z-index: 10;
+   color: red;
+ }
+
+ .buttons__wrap{
+   @include flex(row, center, stretch);
+   position: absolute;
+   bottom: 0;
+   left: -3px;
+   right: -2px;
+ }
+ .buttons__link{
+   display: block;
+   width: 33%;
+ }
+ .buttons__item{
+   text-align: center;
+   width: 100%;
+   padding: 10px 0;
+   @include font(18px, $sans, #fff);
+   background: $green;
+   border-left: 1px solid #ccc;
+      &:hover{
+     background: $dark-green;
+    }
+ }
+ .buttons__link--50{
+   width: 500%;
+ }
+ //----------------------------------------    TITLE
+ .page-title__wrap{
+   @include flex(for, center, center);
+   position: relative;
+   width: 500px;
+   min-height: 180px;
+ }
+ .page-title__pic-wrap{
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+ }
+ .page-title__pic{
+   opacity: .1;
+   width: 100%;
+ }
+ .page-title__desc-text{
+   @include font(42px, $oswald, $black);
+   font-weight: bold;
+ }
+ .page-title__desc{
+   text-align: center;
+   width: 60%;
+ }
+ 
+ //--------------------------------------------------MENU 
+
+ .menu-wrap{
+   z-index: 100;
+   position: absolute;
+   right: -500px;
+   width: 500px;
+   height: 100%;
+   background: rgba($green, .9);
+ }
+ .display{
+   display: none;
+ }
+ .menu__close{
+   margin: 20px 0 60px 40px;
+ }
+ .menu__close-item {
+   cursor: pointer;
+   @include font (42px, $sans, #fff);
+   opacity: .9;
+    &:hover{
+      opacity: .7;
+    }
+ }
+ .menu__list{
+   width: 300px;
+   margin-left: 40px;
+   @include flex(column, flex-start, flex-start);
+ }
+ .menu-item{
+   margin-bottom: 50px;
+ }
+ .menu__link{
+   padding: 0 0 5px 20px;
+   display: block;
+   @include font(22px, $sans, #fff);
+   opacity: .9;
+   &:hover{
+     opacity: .7;
+     color: #fff;
+   }
+ }
+ .menu-active{
+   border-left: 2px solid rgba(#fff, .9);
+ }
+
+ //-------------------------------------ajax respond
+
+ .respond-wrap{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
+ .respond__inner{
+   box-sizing: border-box;
+   padding: 20px;
+   text-align: center;
+   background: rgba(#000, .7);
+ }
+ .respond__content{
+   @include font(22px, $sans, #fff);
+ }
+ .respond__content--title{
+   @include font(28px, $sans, #fff);
+ }

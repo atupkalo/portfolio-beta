@@ -1,0 +1,71 @@
+.wrapper_flex{
+  @include flex(row, center, center);
+}
+
+//  ------------------------------------------- AUTHORIZATION STYLES
+
+.author{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.author__clone{
+  position: absolute;
+  top: 9%;
+  right: 10%;
+  width: 146px;
+  height: 42px;
+}
+.author__link{
+  @include font(18px, $sans, #fff);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition-duration: .3s;
+    &:hover{
+      color: $green;
+      background: #fff;
+    }
+
+}
+
+.front-block__3d{                            //parent
+  perspective: 1000px;
+}
+
+.front-block__rotate{                        //rotate
+  position: relative;
+  width: 380px;
+  height: 400px;
+  transition: .5s;
+  transform-style: preserve-3d;
+}
+
+.front-block__wrap-front{                     //pic
+  backface-visibility: hidden;
+}
+.front-block__wrap-back{                      //text
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front-block{
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 380px;
+  height: 400px;
+  background: rgba(255, 255, 255, .8);
+}
+.front-block_bg{
+  background: #fff;
+}
+
+
+
+
+
+

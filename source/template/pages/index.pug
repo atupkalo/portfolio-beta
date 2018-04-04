@@ -1,0 +1,15 @@
+extends ../_template
+
+block variables
+  - var title = 'main'
+
+block content
+  +preloader
+  .wrapper.wrapper_flex
+    include ../common/front-paralax
+    .author__clone
+    .author
+        a(href="#").author__link authorization
+    include ../common/_front_block
+
+

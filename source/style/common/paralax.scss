@@ -1,0 +1,56 @@
+//.front__bg-wrap{
+//  display: none;
+//}
+.front__bg{
+  left: 50%;
+  height: 100%;
+  position: absolute;
+}
+.front__bg-pic{
+  width: 100%;
+}
+.front__bg_10{
+  @include param-paralax(3800px, -1900px, +100px, -50);
+}
+.front__bg_9{
+  @include param-paralax(3400px, -1700px, -0px, -45);
+}
+.front__bg_8{
+  @include param-paralax(3200px, -1600px, -0px, -40);
+}
+.front__bg_7{
+  @include param-paralax(3000px, -1500px, -0px, -35);
+}
+.front__bg_6{
+  @include param-paralax(2800px, -1400px, -0px, -30);
+}
+.front__bg_5{
+  @include param-paralax(2600px, -1300px, -0px, -25);
+}
+.front__bg_4{
+  @include param-paralax(2000px, -1000px, -0px, -20);
+}
+.front__bg_3{
+  @include param-paralax(2000px, -1000px, -500px, -15);
+}
+.front__bg_2{
+  @include param-paralax(2000px, -1000px, -150px, -10);
+}
+.front__bg_1{
+  @include param-paralax(2000px, -1000px, -300px, -5);
+}
+
+//---------------------------------------------------gag
+.front-gag{
+  display: none;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.front-gag__pic{
+  width: 100%;
+  height: 100%;
+}

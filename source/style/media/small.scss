@@ -1,0 +1,123 @@
+@media (max-width: 786px) {
+//  --------------------------------------------header
+  .header-wrap {
+    min-height: 400px;
+  }
+
+  .header-avatar{
+    margin-bottom: 20px;
+  }
+  .socials{
+    width: 130px;
+  }
+  .header-bg__img-wrapper{
+    width: 95%;
+    height: 200px;
+  }
+  .header__triangle-left, .header__triangle-right{
+    height: 100px;
+  }
+  //  ----------------------------------------------footer
+  .footer-top, .footer-bottom{
+    @include flex(column, center, center);
+  }
+  .footer__menu-list{
+    margin-bottom: 20px;
+  }
+  .footer-bottom__left{
+    padding-bottom: 10px;
+  }
+  .speakers-title{
+    margin-bottom: 0;
+  }
+  .cont-form__title{
+    color: #fff;
+  }
+  //  ---------------------------------------------menu
+  .menu-wrap{
+    width: 200px;
+    right: -200px;
+  }
+
+
+
+
+
+//---------------------------------------------------------------------INDEX
+  .author{
+    top: 5%;
+    left: 50%;
+    margin-left: -74px;
+  }
+  .author__clone{
+    top: 4%;
+    left: 50%;
+    margin-left: -74px;
+    height: 42px;
+    width: 146px;
+  }
+  .front-block__rotate{                        //rotate
+    width: 320px;
+    height: 380px;
+  }
+  .front-block{
+    width: 320px;
+    height: 380px;
+  }
+
+//  ---------------------------------------------------------------------BLOG
+  .articles-wrap{
+    width: 96%;
+  }
+  .articles-wrap{
+    margin: 0;
+  }
+//-----------------------------------------------------------------------ABOUT
+  .about__triangle-left, .about__triangle-right{
+    height: 100px;
+    margin-top: 50px;
+  }
+
+//  ----------------------------------------------skills
+  .skills-svg__item{
+    margin-right: -1%;
+  }
+  .skills-svg__list{
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+  }
+  .about-skills__item-title{
+    margin: 10px 0;
+  }
+  .page-title__pic-wrap
+
+
+
+//  ------------------------------------------------------------------------MY WORK
+//  ----------------------------------------------speakers
+  .speakers-content{
+    @include flex(column, center, center);
+  }
+  .speakers-content__item{
+    width: 96%;
+    padding: 10px;
+    background: rgba(#fff, .6);
+  }
+  .speakers-person{
+    @include flex(row, flex-start, center);
+    padding-left: 20px;
+  }
+  .speakers-bottom{
+    margin-bottom: 100px;
+  }
+  .cont-form__wrap{
+    width: 330px;
+  }
+
+  .page-title__desc{
+    width: 90%;
+  }
+
+//-----------------------------------------------------slider
+
+}

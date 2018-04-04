@@ -1,0 +1,26 @@
+extends ../_template
+
+block variables
+    - var title = 'work'
+
+block content
+    +menu
+    +preloader
+    .wrapper
+        section.header
+            include ../common/header
+        section.work__page-title
+            .main__page-title
+                +page_title('works', 'My work')
+        section.main-slider
+            include ../common/slider
+        section.speakers
+            .speakers-title
+                +page_title('about', 'What people say about me')
+            include ../common/speakers
+        footer.footer
+            include ../common/footer
+
+
+
+

@@ -1,0 +1,40 @@
+.speakers-wrap
+    .speakers-bg
+        picture
+            source(srcset="/assets/img/bg-gossip.png" media="(min-width: 1200px)")
+            source(srcset="/assets/img/spk_bg1200.png" media="(min-width: 768px)")
+            source(srcset="/assets/img/spk_bg768.png" media="(min-width: 420px)")
+            img(src="/assets/img/spk_bg420.png").speakers-bg__img
+    .speakers-top
+        .speakers-content
+            .speakers-content__item
+                .speakers-content__icon <i class="far fa-comment"></i>
+                .speakers-content__text
+                    p.
+                        Anatolii took classes to update his skills in one of the best programming
+                        schools in Russia. It was days of hard work learning best practices and
+                        modern technologies of the contemporary web development world.
+                .speakers-content__person-wrap
+                    .speakers-person
+                        .speaker-person__pic-wrap
+                            img(src="/assets/img/kovdim.png").speaker-person__img
+                        .speaker-person__desc
+                            .speaker-person__name Demitriy Kovalchuk
+                            .speaker-person__who  Superwiser of the Loftschool
+            .speakers-content__item
+                .speakers-content_-item
+                    .speakers-content__icon <i class="far fa-comment"></i>
+                    .speakers-content__text
+                        p.
+                            The code behind this website can withstand any testing scenario
+                            so please be fancy and don’t use old browsers.
+                    .speakers-content__person-wrap
+                        .speakers-person
+                            .speaker-person__pic-wrap
+                                img(src="/assets/img/zar.png").speaker-person__img
+                            .speaker-person__desc
+                                .speaker-person__name Zar Zakharov
+                                .speaker-person__who  Tutor of the Loftschool
+    .speakers-bottom
+        include ../common/contact_form
+

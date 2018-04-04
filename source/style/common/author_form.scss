@@ -1,0 +1,47 @@
+.terms{
+  width: 300px;
+  margin: 5px auto;
+  text-align: center;
+  color: #d1cfcf;
+}
+.form-error{
+  width: 100%;
+  min-height: 10px;
+  color: red;
+  text-align: center;
+}
+
+.author-form__title{
+  @include font(28px, $oswald, $black);
+  width: 80px;
+  margin: 0 auto;
+}
+.author-form__inputs{
+  @include flex(row, center, center);
+}
+.input-icon{
+  color: $green;
+  font-size: 24px;
+}
+.input-field{
+  margin: 20px 5px;
+  border-radius: 5px;
+  border: 1px solid $green;
+    &:hover{
+      border: 1px solid $dark-green;
+    }
+}
+.author-form__checkbox-wrap{
+  box-sizing: border-box;
+  @include flex(row, center, baseline);
+  color: $gray;
+  width: 100%;
+}
+.checkbox-label{
+  display: block;
+}
+.author-form__checkbox{
+  display: block;
+  float: left;
+  margin-right: 10px !important;
+}

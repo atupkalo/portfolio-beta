@@ -1,0 +1,43 @@
+
+$green: #20c6af;
+$dark-green: #009688;
+$gray: #78797a;
+$black: #778482;
+$sans: 'Open+Sans';
+$oswald: 'yonkyblack';
+
+@import 'misc/mixin';
+@import 'misc/adjustments';
+
+
+@import 'common/paralax';
+@import 'common/_2front_block';
+@import 'common/_work';
+@import 'common/_about';
+@import 'common/author_form';
+@import 'common/header';
+@import 'common/slider';
+@import 'common/speakers';
+@import 'common/footer';
+@import 'common/contact_form';
+@import 'common/mixin_styles';
+@import 'common/skills';
+@import 'common/about_left';
+@import 'common/_blog';
+@import 'common/_admin';
+@import 'common/admin_tabs';
+@import 'common/my_info';
+@import 'common/prelouder';
+
+
+@import 'media/midium';
+@import 'media/small';
+
+@font-face {
+  font-family: 'yonkyblack';
+  src: url('../fonts/yonky-black-demoffp-webfont.woff2') format('woff2'),
+  url('../fonts/yonky-black-demoffp-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

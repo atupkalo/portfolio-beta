@@ -1,0 +1,12 @@
+.cont-form__wrap
+    .cont-form__bg-wrap
+    .cont-form__change-after
+        .cont-form__title-wrap
+            h2.cont-form__title Contact me
+        .cont-form__error
+        form.contact(action="submit" method="post" id="cont-me-form")
+            input(type="text" required placeholder="name" name="name").cont-input.cont-input_name
+            input(type="text" placeholder="phone - (this field is not require)" name="phone" pattern="^[ 0-9]+$").cont-input.cont-input_phone
+            input(type="email" required placeholder="email" name="email").cont-input.cont-input_mail
+            textarea(required maxlength="300" placeholder="your message" name="message").cont-textarea
+        +buttons(2)

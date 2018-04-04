@@ -1,0 +1,95 @@
+.header-wrap{
+  @include flex(column, center, center);
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
+.header-main__bg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1000;
+}
+.header-main__bg__pic{
+  width: 100%;
+}
+.header-bg{
+  @include flex(row, center, center);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+.header-bg__img-wrapper{
+  width: 70%;
+  height: 400px;
+  opacity: 0.2;
+}
+.header-bg__pic{
+  width: 100%;
+}
+
+
+//                       for socials
+.header-socials__wrap{
+  position: absolute;
+  left: 7%;
+  top: 7%;
+}
+
+//                        for avatar
+.header-avatar{
+  margin-bottom: 40px;
+  z-index: 10;
+}
+
+
+
+
+.header-menu__link{
+  display: block;
+}
+.header-arrow__link{
+  z-index: 10;
+  display: block;
+  opacity: .7;
+   &:hover{
+    opacity: 10;
+   }
+}
+.header-menu{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 40px;
+  color: #fff;
+  opacity: .7;
+   &:hover{
+     opacity: 10;
+   }
+}
+
+.header-arrow{
+  padding: 5px;
+  font-size: 40px;
+  color: #fff;
+}
+
+//-------------------------------------------------- TRIANGLES
+.header__triangle-left{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 150px;
+  background: linear-gradient(to top right, #fff 50%, transparent 50%);
+}
+.header__triangle-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 150px;
+  background: linear-gradient(to top left, #fff 50%, transparent 50%);
+}

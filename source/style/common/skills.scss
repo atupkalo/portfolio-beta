@@ -1,0 +1,86 @@
+.about-skills{
+  text-align: center;
+}
+.about-skills__title{
+  padding: 20px 0;
+  @include font(32px, $oswald, $black);
+}
+.about-skills__desc{
+  width: 90%;
+  margin: 0 auto 80px;
+  @include font(18px, $sans, $gray);
+  line-height: 1.6;
+}
+.about-skills__list{
+  text-align: left;
+  @include flex(column, flex-start, flex-start);
+}
+.about-skills__item{
+  min-height: 100px;
+  margin-bottom: 70px;
+}
+.about-skills__item-title {
+  @include font(22px, $sans, $black);
+  margin: 0 0 20px 30px;
+}
+.skills-svg__list{
+  @include flex(row, flex-start, center);
+  padding: 0 30px;
+}
+.skills-svg__item{
+  @include flex(column, center, center);
+  margin-right: 7%;
+}
+
+.skills-svg__decs{
+  @include font(18px, $sans, $green);
+}
+.svg-box{
+  width: 150px;
+  height: 150px;
+}
+.svg-circle{
+  fill: none;
+  stroke-width: 25;
+  stroke: #dfdcd5;
+}
+.inner-circle{
+  fill: none;
+  stroke: $green;
+  stroke-width: 25;
+}
+
+
+
+//---------------------------------------------  dasharray styles
+.svg-circle--html{
+  stroke-dasharray: 298.3;
+}
+.svg-circle--css{
+  stroke-dasharray: 298.3 282.6;
+}
+.svg-circle--js{
+  stroke-dasharray: 186 282.6;
+}
+.svg-circle--php{
+  stroke-dasharray: 31.4 282.6;
+}
+.svg-circle--sql{
+  stroke-dasharray: 31.4 282.6;
+}
+.svg-circle--node{
+  stroke-dasharray: 31.4 282.6;
+}
+.svg-circle--wp{
+  stroke-dasharray: 31.4 282.6;
+}
+.svg-circle--git{
+  stroke-dasharray: 280 282.6;
+}
+.svg-circle--gulp{
+  stroke-dasharray: 285 282.6;
+}
+.svg-circle--webp{
+  stroke-dasharray: 94.2 282.6;
+}
+

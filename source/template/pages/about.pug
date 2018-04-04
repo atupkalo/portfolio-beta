@@ -1,0 +1,29 @@
+extends ../_template
+
+block variables
+    - var title = 'about'
+
+block content
+    +menu
+    +preloader
+    .wrapper
+        section.header
+            include ../common/header
+        section.about
+            .about-wrap
+                .about__triangle-left
+                .about__triangle-right
+                .about-left
+                    include ../common/about_left
+                .about-right
+                    include ../common/skills
+        section.map
+            .map__wrapper
+                .map__error
+                    .map__error-message if you can see this message instead of google map, it means google mapAPI doesn't work for some reason
+                include ../common/my_info
+                #map.map__block
+                .info__wrap
+            .footer__holber
+        footer.footer
+            include ../common/footer
