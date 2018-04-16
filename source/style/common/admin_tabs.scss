@@ -2,48 +2,49 @@
   width: 70%;
   margin-bottom: 30px;
 }
-.admin_tables-wrap{
-  @include flex(row, space-between, flex-start);
-}
-.admin__title-desc{
-  @include flex(row, space-between, center);
-}
 .admin__title{
   @include font(20px, $sans, $black);
   font-weight: bold;
-}
-.admin-table__desc {
-  padding: 15px 0;
-  @include font(18px, $sans, $gray);
-}
-.item-about__tb-cell{
-  @include font(16px, $sans, $gray);
-}
-.item-about__table{
-  padding-top: 20px;
-}
-.about-table__input{
-  padding: 15px;
-  width: 80px;
-  height: 35px;
-  border: 1px solid $green;
-    &:hover{
-      border: 1px solid $dark-green;
-    }
-}
-.admin__button{
-  font-size: 16px;
-  border-radius: 5px;
-  width: 110px;
-  height: 35px;
-  background: $green;
-  color: #fff;
-  border: none;
-    &:hover{
-      background: $dark-green;
-}
+  margin-bottom: 30px;
 }
 
+.top-display__list{
+  @include flex(row, flex-start, flex-start);
+  flex-wrap: wrap;
+}
+
+.top-display__item{
+  width: 140px;
+  @include flex(row, space-between, center);
+  margin: 10px;
+}
+.top-display__item{
+  @include font(18px, $sans, $black);
+}
+.top-display__input{
+  border: 1px solid $green;
+  width: 80px;
+  margin-left: 10px;
+}
+
+
+
+.bottom-dispaly__title{
+  margin-top: 30px;
+  @include font(18px, $sans, $black);
+}
+.bottom-display__item{
+  @include flex(row, flex-start, center);
+}
+.bottom-display__desc{
+  @include font(16px, $sans, $green);
+}
+.bottom-display__input{
+  width: 80px;
+  height: 30px;
+  border: 1px solid $green;
+  margin: 20px 10px;
+}
 //---------------------------------------------  TAB-2
 .admin__blog-wrap{
   margin: 30px 0;

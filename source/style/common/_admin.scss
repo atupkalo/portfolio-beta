@@ -19,6 +19,7 @@
   top: 28px;
   &:hover{
     text-decoration: underline;
+    color: #fff;
   }
 }
 .admin-wrap{
@@ -27,9 +28,26 @@
   background-size: cover;
 }
 
-
+.admin__button{
+  font-size: 16px;
+  border-radius: 5px;
+  width: 110px;
+  height: 35px;
+  background: $green;
+  color: #fff;
+  border: none;
+  &:hover{
+    background: $dark-green;
+  }
+  //&:focus{
+  //  background: none;
+  //  color: $green;
+  //  border: 1px solid $green;
+  //}
+}
 // -------------------------------------  TAB LIST
 .admin__tabs{
+  @include flex(row, flex-start, center);
   font-size: 0;
   background: #f0efea;
 }
@@ -38,8 +56,6 @@
   background: #f0efea;
   width: 180px;
   height: 60px;
-  display: inline-block;
-  vertical-align: middle;
   text-align: center;
   border-right: 2px solid #fff;
   &.active {

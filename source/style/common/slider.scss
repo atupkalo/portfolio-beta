@@ -39,6 +39,7 @@
   }
 }
 .slider-right__btn-item--r{
+  width: 49%;
   border-left: 1px solid #ccc;
   &:hover{
       .slider-dtn__arrow-right{
@@ -135,7 +136,7 @@
   transition: .3s;
 }
 .slider-left__desc-link{
-  margin: 40px auto 0 auto;
+  margin: 40px auto 40px auto;
   border-radius: 5px;
   text-align: center;
   @include font(18px, $sans, #fff);

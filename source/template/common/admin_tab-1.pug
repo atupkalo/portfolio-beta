@@ -1,64 +1,25 @@
 .admin__content-item-about
-    .admin__title About page
-    .admin__title-desc
-        .admin-table__desc Frontend
-        .admin-table__desc Backend and frameworks
-        .admin-table__desc Workflow
-    .admin_tables-wrap
-        table.item-about__table.item-about__table_front
-            tr
-                td.item-about__tb-cell Html
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell CSS
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell JawaScript
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-        table.item-about__table.item-abo_tut_able_backend
-            tr
-                td.item-about__tb-cell PHP
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell sql
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell worldpress
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell Node.js
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-        table.item-about__table.item-about__table_workflow
-            tr
-                td.item-about__tb-cell Git
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell Gulp
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-            tr
-                td.item-about__tb-cell Webpack
-                td.item-about__tb-cell
-                    input.about-table__input
-                td.item-about__tb-cell %
-
-.admin-about__bottom
+    .admin__title About page/Skills
+    .top-display__wrap
+        ul.top-display__list
+            -var skillsArr = ['html', 'css', 'js', 'php', 'sgl', 'wp', 'node', 'git', 'gulp', 'wp']
+            each item in skillsArr
+                li.top-display__item
+                    .pot-display__tech-name= item
+                    input(type="text" data-value=`${item}`).top-display__input
     button(type="submit").admin__button  Retain
+    .bottom-display__wrap
+        .bottom-dispaly__title Add skills of a new technology
+        .bottom-display__item
+            .bottom-display__desc skills name
+            input(type="text").bottom-display__input
+        .bottom-display__item
+            .bottom-display__desc skills percent
+            input(type="text").bottom-display__input
+        button(type="submit").admin__button  add
+        .bottom-dispaly__title Add new section of skills
+            .bottom-display__item
+                .bottom-display__desc new skills section
+                input(type="text").bottom-display__input
+        button(type="submit").admin__button  add
 

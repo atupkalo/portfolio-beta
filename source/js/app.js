@@ -13,9 +13,12 @@ window.addEventListener("load", function(){
         loginForm.valid();
         loginForm.pass();
     };
-    if(location.pathname == '/work.html'){
-        contactForm.valid();
+    if(location.pathname == '/#'){
+        loginForm.valid();
     };
+    // if(location.pathname == '/work.html'){
+    //     contactForm.valid();
+    // };
     if(location.pathname == '/about.html'){
         contacts.down();
         setInterval(function(){
