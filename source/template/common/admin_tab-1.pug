@@ -1,5 +1,9 @@
 .admin__content-item-about
     .admin__title About page/Skills
+    select(size="1" name="skillsblock").top-display__input.top-display__input-select
+        option(name="frontend") frontend
+        option(name="baclend") backend
+        option(name="workflow") workflow
     .top-display__wrap
         ul.top-display__list
             -var skillsArr = ['html', 'css', 'js', 'php', 'sgl', 'wp', 'node', 'git', 'gulp', 'wp']
@@ -7,19 +11,19 @@
                 li.top-display__item
                     .pot-display__tech-name= item
                     input(type="text" data-value=`${item}`).top-display__input
-    button(type="submit").admin__button  Retain
+    button(type="submit").admin__button.admin__button--skills-level  Retain
     .bottom-display__wrap
         .bottom-dispaly__title Add skills of a new technology
         .bottom-display__item
             .bottom-display__desc skills name
-            input(type="text").bottom-display__input
+            input(type="text" name="skills-name").bottom-display__input.bottom-display__input-tech
         .bottom-display__item
             .bottom-display__desc skills percent
-            input(type="text").bottom-display__input
-        button(type="submit").admin__button  add
+            input(type="text" name="skills-percent").bottom-display__input.bottom-display__input-tech
+        button(type="submit").admin__button.admin__button--skills-tech  add
         .bottom-dispaly__title Add new section of skills
             .bottom-display__item
                 .bottom-display__desc new skills section
-                input(type="text").bottom-display__input
-        button(type="submit").admin__button  add
+                input(type="text" name="sec-name").bottom-display__input.bottom-display__input-sec
+        button(type="submit").admin__button.admin__button--skills-section  add
 

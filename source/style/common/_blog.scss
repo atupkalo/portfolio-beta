@@ -44,6 +44,16 @@
 
 
 //-------------------------------------ARTICLES
+.article__img-wrap{
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  float: left;
+  margin: 20px 20px 20px 0;
+}
+.article__img{
+  width: 100%;
+}
 .articles-wrap{
   margin: 0 40px;
   width: 70%;

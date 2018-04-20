@@ -35,6 +35,10 @@ if(location.pathname == '/work.html'){
         },
     ];
 
+    // getResSlider('GET', '').then(function(servRes){
+    //     data.push(servRes);
+    // });
+
 
     var count = 0;
     var dataLength = data.length;
@@ -124,6 +128,20 @@ if(location.pathname == '/work.html'){
         }else{
             return num;
         }
+    };
+
+    function getResSlider(math, url){
+        return new Promise(function(res, rej){
+            var xhr = new XMLHttpRequest();
+            open(math, url);
+            xhr.onloadend = function(){
+                res(xhr.response);
+            };
+            xhr.onerror = function(){
+                rej(xhr.statusText);
+            };
+            xhr.send();
+        });
     };
 
 };

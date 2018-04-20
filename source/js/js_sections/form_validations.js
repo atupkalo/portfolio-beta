@@ -5,14 +5,12 @@ var loginForm = (function () {
 
     return {
         valid: function () {
-            console.log(333);
             check.addEventListener('change', function () {
-                console.log(333);
+
                 var login = document.querySelector('.input-field_log').value;
                 var password = document.querySelector('.input-field_pass').value;
-                console.log(login);
+
                 enterBtn.addEventListener('click', function(){
-                    console.log(login);
                     if (login == 'anatolii' && password == '191080') {
                         enterBtn.setAttribute('href', 'admin.html');
                     }
@@ -38,64 +36,57 @@ var loginForm = (function () {
 
 
 }());
+//----------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------- FORM AJAX REQUEST -------------
+const contactFormData = (function(){
+    const myForm = document.forms[0];
+    const formElems = document.querySelectorAll('.cont-input');
+    const subButton = document.getElementById('submit');
+
+    return{
+        post: function(){
+            var data = {};
+            for(var i = 0; i < formElems.length ; i++){
+               data[formElems[i].name] = formElems[i].value
+            };
+
+            subButton.addEventListener('click', function(){
+                getFormPost('POST',  '/', JSON.stringify(data))
+                    .then(function(result){
+                       var formWrap =  document.querySelector('.cont-form__wrap');
+                       formWrap.appendChild(result);
+                    });
+                console.log(data);
+            });
+
+        }
+    }
+
+}());
 
 
-// const contactForm = (function(){
-//     const myForm = document.forms[0];
-//     const formErr = document.querySelector('.cont-form__error');
-//     const subButton = document.getElementById('submit');
-//     const url = '';
-//     return {
-//         valid(){
-//             subButton.addEventListener("click", function(e){
-//                 e.preventDefault();
-//                 const name = document.querySelector('.cont-input_name').value;
-//                 const phone = document.querySelector('.cont-input_phone').value;
-//                 const email = document.querySelector('.cont-input_mail').value;
-//                 const message = document.querySelector('.cont-textarea').value;
-//                 const info = []; info.push(name, phone, email, message);
-//
-//                 this.formRequest('POST', url, info).then();
-//             });
-//         },
-//         formRequest(meth, path, data){
-//             return new Promise(function(res, rej){
-//                 var xhr = new XMLHttpRequest();
-//                 xhr.open(meth, path);
-//                 xhr.send(data);
-//                 xhr.onreadystatechange = function(){
-//                     if(xhr.readyState === 4 && xhr.status === 200){
-//                         res(xhr.response);
-//                     }
-//                 };
-//                 xhr.onerror = () => {rej(xhr.responseText)}
-//             });
-//         }
-//     }
-//
-// }());
+
+function getFormPost(math, path, data) {
+    return new Promise(function (res, rej) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(math, path);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.onloadend = function () {
+            res(xhr.response);
+        };
+        xhr.onerror = function () {
+            rej(xhr.statusText)
+        };
+        xhr.send(data);
+    });
+}
 
 
-    // function formRequest(meth, path){
-    //     return new Promise(function(res, rej){
-    //         var xhr = new XMLHttpRequest();
-    //         xhr.open(meth, path);
-    //         xhr.send();
-    //         xhr.onreadystatechange = function(){
-    //             if(xhr.readyState === 4 && xhr.status === 200){
-    //                 res(xhr.response);
-    //             }
-    //         };
-    //
-    //     });
-    // };
-    //
-    // document.getElementById('submit').addEventListener('click', function(){
-    //     formRequest('GET', 'ajax.html').then(function(data){
-    //         document.querySelector('.cont-form__wrap').innerHTML = data;
-    //     })
-    //
-    // });
+
+
+
 
 
 

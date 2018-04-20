@@ -39,11 +39,7 @@
   &:hover{
     background: $dark-green;
   }
-  //&:focus{
-  //  background: none;
-  //  color: $green;
-  //  border: 1px solid $green;
-  //}
+
 }
 // -------------------------------------  TAB LIST
 .admin__tabs{
@@ -54,19 +50,18 @@
 .admin__tabs-item {
   color: #9ea3a6;
   background: #f0efea;
-  width: 180px;
+  width: 20%;
   height: 60px;
   text-align: center;
   border-right: 2px solid #fff;
-  &.active {
-    background: #fff;
-  }
 }
 .admin__tabs-item-link{
   display: block;
-  width: 180px;
   height: 60px;
   @include font(22px, $sans, $black);
+  &:active{
+    text-decoration: none;
+  }
   &.change_color{
     color: $green;
   }

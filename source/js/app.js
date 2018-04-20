@@ -1,7 +1,6 @@
 window.addEventListener("load", function(){
 
-
-    tabs();
+    tabs.set();
     flip.set();
     menu.slideTo();
     menu.slideOff();
@@ -16,9 +15,9 @@ window.addEventListener("load", function(){
     if(location.pathname == '/#'){
         loginForm.valid();
     };
-    // if(location.pathname == '/work.html'){
-    //     contactForm.valid();
-    // };
+    if(location.pathname == '/work.html'){
+        contactFormData.post();
+    };
     if(location.pathname == '/about.html'){
         contacts.down();
         setInterval(function(){

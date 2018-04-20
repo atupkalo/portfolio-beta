@@ -14,5 +14,6 @@ module.exports = [
     './source/js/js_sections/big_slider.js',
     './source/js/js_sections/adapt.js',
     './source/js/js_sections/admin.js',
+    './source/js/js_sections/ajax_get.js',
     './source/js/app.js'
 ];
