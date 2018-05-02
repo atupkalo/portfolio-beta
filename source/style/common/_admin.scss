@@ -51,13 +51,11 @@
   color: #9ea3a6;
   background: #f0efea;
   width: 20%;
-  height: 60px;
   text-align: center;
-  border-right: 2px solid #fff;
 }
 .admin__tabs-item-link{
   display: block;
-  height: 60px;
+  border-right: 2px solid #fff;
   @include font(22px, $sans, $black);
   &:active{
     text-decoration: none;
@@ -68,7 +66,7 @@
 
 }
 .admin__tabs-item-title {
-  margin-top: 18px;
+  padding: 10px 5px;
 }
 .admin__content-item{
   -webkit-box-sizing: border-box;

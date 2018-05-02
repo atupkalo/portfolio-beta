@@ -4,27 +4,21 @@
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------BLOG AND ABOUT GET REQUESTS--
 if(location.pathname == '/about.html'){
-
-    getRes('GET', '/').then(function(circleVal){
+    getRes('GET', '/').then(function(circleData){
         var svgCircles = document.querySelectorAll('.inner-circle');
-
-        for(var i = 0; i < svgCircles.length ; i++){
-           if(svgCircles[i].dataset.cirname === circleVal.skillsblockname){
-               svgCircles[i].style.strokeDasharray = circleVal.value + 282.6;
-           }
-        };
+        console.log(circleData);
     });
 
 
  };
 
 if(location.pathname == '/blog.html'){
+
     var artclWrap = document.querySelector('.articles-wrap');
-    var navList = document.querySelecto('.nav__list');
+    var navList = document.querySelector('.nav__list');
     getRes('GET', '/blog').then(function(artclData){
-        artclWrap.appendChild(artclData);
-        navList.appendChild(artclData.title);
-    })
+      console.log(artclData);
+    });
 
 };
 
@@ -32,9 +26,9 @@ if(location.pathname == '/blog.html'){
 function getRes(math, url){
     return new Promise(function(res, rej){
         var xhr = new XMLHttpRequest();
-        open(math, url);
+        xhr.open(math, url);
         xhr.onloadend = function(){
-            res(xhr.response);
+            res(xhr.res);
         };
         xhr.onerror = function(){
             rej(xhr.statusText);

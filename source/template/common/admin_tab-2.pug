@@ -1,16 +1,18 @@
 .admin-blog
     .admin__title Blog page
     .admin__blog-wrap
-        .admin__blog-item-wrap
-            .admin-blog__table-desc  article title
-            input(type="name" placeholder="title" name="artc-title").admin-blog__input.admin-blog__input-title
-        .admin__blog-item-wrap
-            .admin-blog__table-desc   posted date
-            input(type="date" placeholder="date" name="artc-date").admin-blog__input.admin-blog__input-date
-        .admin__blog-item-wrap
-            .admin-blog__table-desc   article content
-            textarea(placeholder="content" name="artc-content").admin-blog__input.admin-blog__input-content
-        .admin__blog-item-wrap
-            .admin-blog__table-desc   articale image
-            input(type="file" name="artc-img").admin-blog__input.admin-blog__imput-img
-    button(type="submit").admin__button.admin__button--blog  submit
+        form.blog-edditor-form(action="submit" method="post")
+            .admin__blog-item-wrap
+                .admin-blog__table-desc  article title
+                input(type="name" placeholder="title" name="title").admin-blog__input.admin-blog__input-title
+            .admin__blog-item-wrap
+                .admin-blog__table-desc   posted date
+                input(type="date" placeholder="date" name="date").admin-blog__input.admin-blog__input-date
+            .admin__blog-item-wrap
+                .admin-blog__table-desc   article content
+                textarea(placeholder="content" name="text").admin-blog__input.admin-blog__input-content
+            .admin__blog-item-wrap
+                .admin-blog__table-desc   articale image
+                input(type="file" name="blogImg").admin-blog__input.admin-blog__imput-img
+                input(type="hidden" name="img" value="")
+            button(type="submit").admin__button.admin__button--blog  submit

@@ -12,26 +12,26 @@ if(location.pathname == '/work.html'){
         {
             title: 'Single Page Application. Weather widget',
             desc: 'HTML, CSS, jQuery, Ajax',
-            img: '/assets/img/proj-1.jpg',
-            link: 'http://cj86618.tmweb.ru/'
+            link: 'http://cj86618.tmweb.ru/',
+            img: '/assets/img/proj-1.jpg'
         },
         {
-            title: 'website of the 2',
-            desc: 'HTML, CSS, JAVASCRIPT-22',
-            img: '/assets/img/new-1.png',
-            link: '#'
+            title: 'Lending page',
+            desc: 'HTML, LESS, jQuery',
+            link: 'http://h-sweet.cj86618.tmweb.ru',
+            img: '/assets/img/h-sweet.png'
         },
         {
             title: 'website of the 3',
             desc: 'HTML, CSS, JAVASCRIPT-333',
-            img: '/assets/img/new-2.png',
-            link: '#'
+            link: '#',
+            img: '/assets/img/new-2.png'
         },
         {
             title: 'website of the 4',
             desc: 'HTML, CSS, JAVASCRIPT-4444',
-            img: '/assets/img/new-3.png',
-            link: '#'
+            link: '#',
+            img: '/assets/img/new-3.png'
         },
     ];
 

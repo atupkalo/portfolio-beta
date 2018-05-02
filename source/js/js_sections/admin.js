@@ -25,61 +25,104 @@ if(location.pathname == '/admin.html'){
 
     };
 
+    function PostFile(math, path, data){
+        return new Promise(function(res, rej){
+            var xhr = new XMLHttpRequest();
+            xhr.open(math, path);
+            xhr.setRequestHeader('Content-type', 'multipart/form-data');
+            xhr.onloadend = function(){
+                res(xhr.response);
+            };
+            xhr.onerror = function(){rej(xhr.statusText)};
+            xhr.send(data);
+        });
+
+    };
+
     var admBlogBtn = document.querySelector('.admin__button--blog');
     var admSliderBtn = document.querySelector('.admin-button--slider ');
-    var admSkillsBtnSec = document.querySelector('.admin__button--skills-section');
-    var admSkillsBtnTech = document.querySelector('.admin__button--skills-tech');
-    var admSkillsBtnLevel =document.querySelector('.admin__button--skills-level');
+    var blogFile = document.querySelector('.admin-blog__imput-img');
+    var sliderFile = document.querySelector('.admin-work__input-file');
 
+    //                                                                                 ---------------  blog
+    blogFile.addEventListener('change', function(){
+        if(blogFile.value){
+            PostFile('POST', '/upload', blogFile.value).then(console.log);
+        };
+    });
 
-    admBlogBtn.addEventListener('click', function(){                               //    blog
+    admBlogBtn.addEventListener('click', function(){
         var blogInputs = document.querySelectorAll('.admin-blog__input');
         var data = {};
         for(var i = 0; i < blogInputs.length ; i++){
             data[blogInputs[i].name] = blogInputs[i].value;
-
         };
-
-        getPost('POST',  '/blog', JSON.stringify(data));
+     getPost('POST',  '/blog', JSON.stringify(data));
     });
 
+    //                                                                                  -------------  slider
+    sliderFile.addEventListener('change', function(){
+        if(sliderFile.value){
+            PostFile('POST', '/upload', sliderFile.value).then(console.log);
+        }
+    });
 
-    admSliderBtn.addEventListener('click', function(){                            // slider
-        var dataSlider = document.querySelectorAll('.admin-work__input-slider');
-        var data = {};
+    admSliderBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        var formSlider = document.forms[4];
 
-        for(var i = 0; i < dataSlider.length ; i++){
-             data[dataSlider[i].name] = dataSlider[i].value;
+        for(var i = 0; i < formSlider.length ; i++){
+
+           if(formSlider[i].type == 'text'){
+               var inputs = formSlider[i];
+           };
+            getPost('POST',  '/slider', JSON.stringify({name: inputs.name, value: inputs.value})).then(console.log).catch(console.log);
         };
-
-        getPost('POST',  '', JSON.stringify(data));
     });
 
-    admSkillsBtnLevel.addEventListener('click', function(){                       //skills level
+    //                                                                                      ---------  skills level
+
+    document.getElementById('levels').addEventListener('click', function(e){
+        e.preventDefault();
+                 var skillsInputs = document.forms[2];
+
+                  for(var i = 0; i < skillsInputs.length ; i++){
+                     if(skillsInputs[i].name){
+                         var inputs = skillsInputs[i];
+                     }
+                      getPost('POST', '/skills', JSON.stringify({name: inputs.name, value: inputs.value})).then(console.log).catch(console.log);
+                  };
 
     });
 
 
-
-    admSkillsBtnTech.addEventListener('click', function(){                        //skills technology
-        var dataSkillsTech = document.querySelectorAll('.bottom-display__input-tech');
+    //                                                                                       --------  skills technology
+    document.getElementById('circle').addEventListener('click', function(e){
+        e.preventDefault();
+        var dataSkillsTech = document.forms[1];
         var data = {};
         for(var i = 0; i < dataSkillsTech.length ; i++){
-           data[dataSkillsTech[i].name] = dataSkillsTech[i].value
-
+            if(dataSkillsTech[i].name){
+                data[dataSkillsTech[i].name] = dataSkillsTech[i].value
+            }
         };
-
         getPost('POST',  '', JSON.stringify(data));
     });
 
-
-    admSkillsBtnSec.addEventListener('click', function(){                         //skills section
-        var dataSkillsSec = document.querySelector('.bottom-display__input-sec');
+    //                                                                                        --------- skills section
+    document.getElementById('sec').addEventListener('click', function(e){
+        e.preventDefault();
+        var dataSkillsSec = document.forms[0];
         var data = {};
-        data[dataSkillsSec.name] = dataSkillsSec.value;
-
+        for(var i = 0; i < dataSkillsSec.length ; i++){
+          if(dataSkillsSec[i].name){
+              data[dataSkillsSec[i].name] = dataSkillsSec[i].value;
+          }
+        };
         getPost('POST',  '', JSON.stringify(data));
     });
+
+
 
 }
 

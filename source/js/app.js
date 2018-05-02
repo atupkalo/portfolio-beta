@@ -14,6 +14,10 @@ window.addEventListener("load", function(){
     };
     if(location.pathname == '/#'){
         loginForm.valid();
+        loginForm.pass();
+    };
+    if(location.pathname == '/#'){
+        loginForm.valid();
     };
     if(location.pathname == '/work.html'){
         contactFormData.post();
